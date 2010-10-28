@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+begin
+  require 'coffeefi/cli'
+rescue LoadError
+  $: << File.expand_path('../../lib', __FILE__)
+  require 'coffeefi/cli'
+end
